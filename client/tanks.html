@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>K2 Battle </title>        
+        
+        <script src="./js/tween.js" type="text/javascript"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="./js/phaser.js" type="text/javascript"></script>		
+		<script src="./js/tanks.js" type="text/javascript"></script>
+		<style>
+		    canvas{
+		        cursor:crosshair;
+		    }
+		    
+		    .chatText{
+                position:absolute;
+                z-index:800;
+                top:800px;
+                left:50px;
+                width:300px;
+		    }
+		</style>
+		
+			<script>
+			
+		// chat
+		window.addEventListener("keypress", dealWithKeyboard, false);
+		var isChatOpen = false;
+		function dealWithKeyboard(e){
+		   if(e.keyCode ==  13 && !isChatOpen){
+		    isChatOpen = true;
+            var input = document.createElement("input");
+            input.type = "text";
+            input.className = "chatText"; // set the CSS class
+            input.id = "chatBox";
+            wrapper.appendChild(input)
+            input.focus();
+		   }
+		   
+		   else if(e.keyCode ==  13 && isChatOpen){
+		    isChatOpen = false;
+            console.log("sending message..");
+            var text = document.getElementById("chatBox").value;
+            console.log("text: " + text);
+            socket.emit('sendMessage', text);
+            document.getElementById("chatBox").remove();
+		   }
+		}
+			
+        function Submit($scope) { 
+            var text = document.getElementsByName('text')[0].value;
+            console.log(text);
+            socket.emit('makeConnection', text);
+            document.getElementsByName('text')[0].value = '';
+        }
+	</script>
+		
+    </head>
+    <body>
+        <div id="intro">Choose a name: <input name="text" type="text" class="span6" ng-model="text" placeholder="Enter a name"><input type="submit" class="span1 btn btn-primary" onClick="Submit()" value="Send" ng-disabled="!text">
+        </div>
+        <br/>
+        <div id="wrapper">
+</div>
+	</body>
+</html>

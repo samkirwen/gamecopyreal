@@ -1,0 +1,25 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0   4192   316 ?        Ss+  04:19   0:00 /mnt/shared/sbin/micro-inetd 22 /mnt/shared/sbin/dropbear -i -s -m -d /mnt/shared/etc/dropbear/dropbear_dss_host_key -r /mnt/shared/etc/dropbear/dropbear_rsa_host_key
+ubuntu     243  0.0  0.0  25416  2820 ?        Ss   04:19   0:03 /mnt/shared/sbin/tmux -u2 -L cloud91.8 new -s samkirwen@newest_501 export ISOUTPUTPANE=0;bash -l ; set-option -g status off ; set-option destroy-unattached off ; set-option mouse-select-pane on ; set-option set-titles on ; set-option quiet off ; set-option -g prefix C-b ; set-option -g terminal-overrides 'xterm:colors=256' ; set-window-option c0-change-trigger 0
+ubuntu     244  0.0  0.0  11256  1304 pts/1    Ss   04:19   0:00 bash -c export ISOUTPUTPANE=0;bash -l
+ubuntu     245  0.0  0.0  26996  9488 pts/1    S    04:19   0:00 bash -l
+ubuntu    2388  0.0  0.0   4444   748 ?        S    05:26   0:00 /bin/sh /usr/bin/mysqld_safe --defaults-file=/home/ubuntu/lib/mysql/etc/my.cnf
+ubuntu    2734  0.0  0.0 654020 35660 ?        Sl   05:26   0:00 /usr/sbin/mysqld --defaults-file=/home/ubuntu/lib/mysql/etc/my.cnf --basedir=/usr --datadir=/home/ubuntu/lib/mysql/data/ --plugin-dir=/usr/lib/mysql/plugin --log-error=/home/ubuntu/lib/mysql/log/mysql_error.log --pid-file=/home/ubuntu/lib/mysql/pid/mysql.pid --socket=/home/ubuntu/lib/mysql/socket/mysql.sock
+ubuntu    6490  0.0  0.0  11260  1300 pts/3    Ss+  05:39   0:00 bash -c bash -l -c 'printf '\''\033[1mStarting Apache httpd, serving \033[01;34mhttps://newest-samkirwen.c9.io/client/index.html\033[00m.\033[m '\'' ; "run-apache2" "-X"'; ([ -e '/home/ubuntu/.c9/.run_output169343.watch' ] && rm '/home/ubuntu/.c9/.run_output169343.watch')
+ubuntu    6492  0.0  0.0  15816  6332 pts/3    S+   05:39   0:00 bash -l -c printf '\033[1mStarting Apache httpd, serving \033[01;34mhttps://newest-samkirwen.c9.io/client/index.html\033[00m.\033[m ' ; "run-apache2" "-X"
+ubuntu    6686  0.0  0.0  11292  1572 pts/3    S+   05:39   0:00 /bin/bash -e /mnt/shared/bin/run-apache2 -X
+ubuntu    6723  0.0  0.0 382040 17944 ?        Ss   05:39   0:00 apache2
+ubuntu    6726  0.0  0.0   6072   596 pts/3    S+   05:39   0:00 tail -n 0 --pid=6723 -f /home/ubuntu/lib/apache2/log/access.log /home/ubuntu/lib/apache2/log/error.log
+ubuntu    6727  0.0  0.0   6072   592 pts/3    S+   05:39   0:00 tail -n +4
+ubuntu    6728  0.0  0.0  10556   892 pts/3    S+   05:39   0:00 grep -v Unclean shutdown of previous Apache
+ubuntu    6730  0.0  0.0 382120  7504 ?        S    05:39   0:00 apache2
+ubuntu    6731  0.0  0.0 382120  7580 ?        S    05:39   0:00 apache2
+ubuntu    6732  0.0  0.0 382120  7576 ?        S    05:39   0:00 apache2
+ubuntu    6733  0.0  0.0 382120  7360 ?        S    05:39   0:00 apache2
+ubuntu    6734  0.0  0.0 382120  7580 ?        S    05:39   0:00 apache2
+root      6740  0.1  0.0  19376  1264 ?        Ss   05:40   0:00 /mnt/shared/sbin/dropbear -i -s -m -d /mnt/shared/etc/dropbear/dropbear_dss_host_key -r /mnt/shared/etc/dropbear/dropbear_rsa_host_key
+ubuntu    6741  2.0  0.0 997200 61160 ?        Sl   05:40   0:02 vfs-worker {"pingInterval":5000,"tmuxBin":"/mnt/shared/sbin/tmux","root":"/","debug":true,"connectionTimeout":60000,"sshConnectTimeout":30000,"metapath":"/.c9/metadata","wsmetapath":"/.c9/metadata/workspace","defaultEnv":{}}                                                                                                                                                           
+ubuntu    8472  0.0  0.0  15800   928 pts/0    Ss+  05:41   0:00 /mnt/shared/sbin/tmux -u2 -L cloud91.8 attach -t output743020
+ubuntu    8946  0.0  0.0  15800   932 pts/2    Ss+  05:41   0:00 /mnt/shared/sbin/tmux -u2 -L cloud91.8 attach -t samkirwen@newest_501 -d
+ubuntu    8968  0.0  0.0  17256  1316 pts/1    R+   05:42   0:00 ps aux
+ubuntu    8969  0.0  0.0   8384   872 pts/1    S+   05:42   0:00 less -R
